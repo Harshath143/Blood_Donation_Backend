@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+    .wrapper {
+      width: 100%;
+      table-layout: fixed;
+      background-color: #f7f9fc;
+      padding-bottom: 40px;
+    }
+    .main-table {
+      background-color: #ffffff;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 600px;
+      border-spacing: 0;
+      font-family: sans-serif;
+      color: #333333;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-top: 40px;
+    }
+    .header {
+      background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+      padding: 32px;
+      text-align: center;
+    }
+    .header h1 {
+      color: #ffffff;
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+    .content {
+      padding: 40px;
+      line-height: 1.6;
+      font-size: 16px;
+      color: #1f2937;
+    }
+    .content h2 {
+      margin-top: 0;
+      color: #111827;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .button-container {
+      text-align: center;
+      margin: 32px 0;
+    }
+    .btn {
+      background-color: #e11d48;
+      color: #ffffff !important;
+      text-decoration: none;
+      padding: 12px 30px;
+      font-weight: 600;
+      border-radius: 8px;
+      display: inline-block;
+      box-shadow: 0 4px 6px rgba(225, 29, 72, 0.2);
+    }
+    .footer {
+      background-color: #f3f4f6;
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: #6b7280;
+    }
+    .footer a {
+      color: #e11d48;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <table class="main-table">
+      <tr>
+        <td class="header">
+          <h1>LifeDrop 🩸</h1>
+        </td>
+      </tr>
+      <tr>
+        <td class="content">
+          <h2>Welcome to LifeDrop, {{ name }}!</h2>
+          <p>Thank you for joining our community. LifeDrop is a life-critical real-time platform designed to connect blood donors, recipients, and hospitals directly when it matters most.</p>
+          <p>By registering on LifeDrop, you are now part of a network that helps save lives every single day. Whether you're here to donate, coordinate, or request blood in an emergency, your presence makes a difference.</p>
+          <div class="button-container">
+            <a href="https://lifedrop.netlify.app/dashboard" class="btn" target="_blank">Get Started</a>
+          </div>
+          <p>If you have any questions or need immediate support, don't hesitate to reply directly to this email or write to us at {{ support_email }}.</p>
+          <p>Best regards,<br><strong>The LifeDrop Team</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="footer">
+          <p>This is an automated email from {{ app_name }}.<br>
+          © 2026 LifeDrop. All rights reserved.</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>

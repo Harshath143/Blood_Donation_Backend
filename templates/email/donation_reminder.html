@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body {
+      font-family: 'Outfit', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #f7f9fc;
+      margin: 0;
+      padding: 0;
+    }
+    .wrapper {
+      width: 100%;
+      table-layout: fixed;
+      background-color: #f7f9fc;
+      padding-bottom: 40px;
+    }
+    .main-table {
+      background-color: #ffffff;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 600px;
+      border-spacing: 0;
+      color: #333333;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      margin-top: 40px;
+    }
+    .header {
+      background: linear-gradient(135deg, #e11d48 0%, #be123c 100%);
+      padding: 32px;
+      text-align: center;
+    }
+    .header h1 {
+      color: #ffffff;
+      margin: 0;
+      font-size: 26px;
+      font-weight: 700;
+    }
+    .content {
+      padding: 40px;
+      line-height: 1.6;
+      font-size: 16px;
+      color: #1f2937;
+    }
+    .content h2 {
+      margin-top: 0;
+      color: #111827;
+      font-size: 20px;
+      font-weight: 600;
+    }
+    .reminder-box {
+      background-color: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      padding: 24px;
+      border-radius: 8px;
+      margin: 24px 0;
+    }
+    .reminder-box p {
+      margin: 0;
+      color: #166534;
+      font-weight: 500;
+    }
+    .btn-container {
+      text-align: center;
+      margin: 32px 0;
+    }
+    .btn {
+      background-color: #e11d48;
+      color: #ffffff !important;
+      text-decoration: none;
+      padding: 12px 30px;
+      font-weight: 600;
+      border-radius: 8px;
+      display: inline-block;
+      box-shadow: 0 4px 6px rgba(225, 29, 72, 0.2);
+    }
+    .footer {
+      background-color: #f3f4f6;
+      padding: 24px;
+      text-align: center;
+      font-size: 13px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <table class="main-table">
+      <tr>
+        <td class="header">
+          <h1>LifeDrop Reminder 🩸</h1>
+        </td>
+      </tr>
+      <tr>
+        <td class="content">
+          <h2>You Are Eligible to Donate Again!</h2>
+          <p>Hello {{ donor_name }},</p>
+          <p>We wanted to reach out and let you know that according to our records, your last donation of blood was on <strong>{{ last_donated }}</strong>.</p>
+          
+          <div class="reminder-box">
+            <p>🎉 It has been over 56 days since your last donation, which means your body has fully replenished its supply, and you are now eligible to save lives once again!</p>
+          </div>
+
+          <p>There is a constant demand for blood of type <strong>{{ blood_type }}</strong>, and your donation could make a life-saving difference for someone in need today. If you're willing to make yourself available for emergency notifications or plan a donation, please update your status.</p>
+          
+          <div class="btn-container">
+            <a href="{{ donate_url }}" class="btn" target="_blank">Manage Availability</a>
+          </div>
+
+          <p>Thank you for being such a vital part of our community. Your generosity literally saves lives.</p>
+          <p>Warm regards,<br><strong>The LifeDrop Team</strong></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="footer">
+          <p>This email was sent to you because you registered as a donor on LifeDrop.<br>
+          © 2026 LifeDrop. All rights reserved.</p>
+        </td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
